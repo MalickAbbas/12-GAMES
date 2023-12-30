@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DEE88E13-A358-40D5-9404-9D5EE24175F1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>_12Games</RootNamespace>
+    <AssemblyName>12Games</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\hangman-master\hangman\hangman.csproj">
+      <Project>{7c944506-620f-411c-b43c-6a29f1ae6e61}</Project>
+      <Name>hangman</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\kidsMathGame-master\KidsMathGame\KidsMathGame.csproj">
+      <Project>{e3d96904-3bc5-4458-aaaf-2388496e7294}</Project>
+      <Name>KidsMathGame</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\PongProject-master\PongProject\PongProject.csproj">
+      <Project>{22ed71d9-c5b8-4d2e-b508-5af6c9296c33}</Project>
+      <Name>PongProject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Snake-Game-WPF-master\SnakeGame\SnakeGame.csproj">
+      <Project>{576d9279-b211-4d2b-9342-156f5bbc78b2}</Project>
+      <Name>SnakeGame</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\tictactoe-wpf-master\TicTacToeWPF\TicTacToeWPF.csproj">
+      <Project>{e33ddc98-1e6c-4788-8581-aa2fac682c1f}</Project>
+      <Name>TicTacToeWPF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\WPF-Balloon-popping-game-main\WPF Balloon Popping Game Moo ICT\WPF Balloon Popping Game Moo ICT.csproj">
+      <Project>{279675a8-0f15-4bf7-9fbb-5542b0e4d2c5}</Project>
+      <Name>WPF Balloon Popping Game Moo ICT</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\WPF-Clicking-Game-with-Sound-main\Clicky Game WPF MOO ICT\Clicky Game WPF MOO ICT.csproj">
+      <Project>{a8600471-75d1-4fec-aaa7-e01c602df436}</Project>
+      <Name>Clicky Game WPF MOO ICT</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\WPF-Flappy-Bird-Game-main\Flappy Bird WPF MOO ICT\Flappy Bird WPF MOO ICT.csproj">
+      <Project>{d93f6c57-42f0-41c9-aadc-ac22771583b9}</Project>
+      <Name>Flappy Bird WPF MOO ICT</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\wpf-memory-Game-master\WpfApp1\WpfApp1\WpfApp1.csproj">
+      <Project>{12134a7a-db5b-4086-8f7d-c8307a115ed5}</Project>
+      <Name>WpfApp1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\WPF-Pac-Man-Game-main\PAC Man Game WPF MOO ICT\PAC Man Game WPF MOO ICT.csproj">
+      <Project>{753c6d40-10e4-41c6-bc98-1e4cf7098beb}</Project>
+      <Name>PAC Man Game WPF MOO ICT</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\WPF-Space-Invaders-Game-main\Space Invaders Game WPF MOO ICT\Space Invaders Game WPF MOO ICT.csproj">
+      <Project>{2209d7f8-d7c5-4132-b99f-be6131935b5f}</Project>
+      <Name>Space Invaders Game WPF MOO ICT</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\WPF-Space-shooter-game-main\Space battle shooter WPF MOO ICT\Space battle shooter WPF MOO ICT.csproj">
+      <Project>{a07df81c-1169-41aa-8698-3125ca1a9117}</Project>
+      <Name>Space battle shooter WPF MOO ICT</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
